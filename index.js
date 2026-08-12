@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ---------- 定义状态常量（方便统一修改文案） ----------
     const INITIAL_MESSAGE = '你好，欢迎访问这个牛逼网页。';
-    const UPDATED_MESSAGE = '祝你玩的开心~';
+    const UPDATED_MESSAGE = '祝你玩得舒爽~';
 
     // ---------- 按钮点击处理函数 ----------
     function handleButtonClick() {

@@ -1,0 +1,126 @@
+ /* 全局基础样式：重置内外边距，使用 border-box 盒模型 */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ /* 页面主体：居中显示，渐变背景，柔光效果 */
+ body {
+     min-height: 100vh;
+     background: linear-gradient(145deg, #f6f9fc 0%, #e6f0f5 100%);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+     padding: 1.5rem;
+ }
+
+ /* 提示框卡片：毛玻璃效果，圆角阴影，视觉层次感 */
+ .toast-card {
+     background: rgba(255, 255, 255, 0.85);
+     backdrop-filter: blur(6px);
+     /* 背景模糊，增强毛玻璃感 */
+     -webkit-backdrop-filter: blur(6px);
+     border-radius: 2.5rem;
+     box-shadow:
+         0 20px 40px -12px rgba(0, 20, 30, 0.25),
+         0 8px 24px -6px rgba(0, 0, 0, 0.08),
+         inset 0 1px 0 rgba(255, 255, 255, 0.7);
+     padding: 2.8rem 3rem;
+     max-width: 540px;
+     width: 100%;
+     text-align: center;
+     transition: all 0.2s ease;
+     border: 1px solid rgba(255, 255, 255, 0.3);
+ }
+
+ /* 提示内容：大号字体，清晰醒目 */
+ .toast-message {
+     font-size: 2rem;
+     font-weight: 550;
+     color: #1a2e3f;
+     letter-spacing: -0.01em;
+     line-height: 1.4;
+     margin-bottom: 2.2rem;
+     word-break: break-word;
+     /* 长词换行，防止溢出 */
+     transition: color 0.2s;
+     padding: 0 0.2rem;
+ }
+
+ /* 装饰性前后缀：纯视觉点缀，不影响功能 */
+ .toast-message::before {
+     content: "✨ ";
+     font-size: 1.8rem;
+     opacity: 0.7;
+ }
+
+ .toast-message::after {
+     content: " ✨";
+     font-size: 1.8rem;
+     opacity: 0.7;
+ }
+
+ /* 按钮样式：深色渐变，圆润，悬停有反馈 */
+ .toast-btn {
+     background: #1f3a4b;
+     border: none;
+     padding: 1rem 2.8rem;
+     border-radius: 60px;
+     font-size: 1.35rem;
+     font-weight: 550;
+     color: white;
+     cursor: pointer;
+     box-shadow: 0 8px 18px -6px rgba(26, 46, 63, 0.3);
+     transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1);
+     letter-spacing: 0.3px;
+     background: linear-gradient(145deg, #1f3a4b, #142b39);
+     border: 1px solid rgba(255, 255, 255, 0.15);
+ }
+
+ /* 按钮悬停效果：轻微上浮，加深颜色 */
+ .toast-btn:hover {
+     transform: scale(1.02) translateY(-2px);
+     background: linear-gradient(145deg, #254f64, #1a3a4b);
+     box-shadow: 0 14px 24px -8px rgba(20, 40, 55, 0.4);
+ }
+
+ /* 按钮点击效果：下沉，模拟按压感 */
+ .toast-btn:active {
+     transform: scale(0.96) translateY(2px);
+     box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.2);
+ }
+
+ /* 按钮消失状态：由 JS 添加 .hidden 类来控制隐藏 */
+ .toast-btn.hidden {
+     display: none;
+ }
+
+ /* 底部小字：纯装饰，无功能 */
+ .footnote {
+     margin-top: 2rem;
+     font-size: 0.75rem;
+     color: #6a7f8e;
+     opacity: 0.5;
+     letter-spacing: 0.3px;
+     border-top: 1px dashed rgba(0, 0, 0, 0.05);
+     padding-top: 1.2rem;
+ }
+
+ /* 响应式：小屏幕下调整内边距和字体大小 */
+ @media (max-width: 480px) {
+     .toast-card {
+         padding: 2rem 1.8rem;
+         border-radius: 2rem;
+     }
+
+     .toast-message {
+         font-size: 1.6rem;
+     }
+
+     .toast-btn {
+         padding: 0.8rem 2rem;
+         font-size: 1.2rem;
+     }
+ }

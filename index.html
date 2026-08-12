@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="toast-card" role="dialog" aria-live="polite">
+        <!-- 提示框内容：id 用于 JS 获取并更新内容 -->
+        <div id="messageDisplay" class="toast-message">你好，欢迎访问这个牛逼网页。</div>
+
+        <!-- 按钮：id 用于 JS 绑定点击事件和控制显示隐藏 -->
+        <button id="actionBtn" class="toast-btn">好的</button>
+
+        <!-- 底部装饰文字，不影响功能 -->
+        <div class="footnote">✨ 点击按钮体验变化 ✨</div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

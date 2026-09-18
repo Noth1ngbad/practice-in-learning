@@ -1,6 +1,5 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
-from pydantic import BaseModel
 
 
 profile = {

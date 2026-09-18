@@ -1,1 +1,1 @@
-当前版本：next.js + fastapi
+当前版本：next.js + fastapi + python
